@@ -1,17 +1,14 @@
 <?php
-
 #
-# Enter your owncloud URL below with no trailing slash
-# Ex. "https://mydomain.ext/owncloud"
+# Enter your Nextcloud URL below with no trailing slash
+# Ex. "https://mydomain.ext/nextcloud"
 #
-$owncloud_url = "";
-
+$nextcloud_url = "";
 #
 # Set enabled to true when you are ready to use the application
 #
 #$enabled = true;
 $enabled = false;
-
 function validateCode($string) {
 	if(preg_match("/^[\w]+$/", $string)) {
 		return true;
@@ -19,17 +16,15 @@ function validateCode($string) {
 		return false;
 	}
 }
-
 function startsWith($haystack, $needle) {
 	return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
 }
-
 if ($enabled) {
 	$inurl = $_SERVER["REQUEST_URI"];
 	$code = substr($inurl, strpos($inurl, "?") + 1);    
 	if (validateCode($code)) {
-		$url = $owncloud_url."/index.php/apps/shorten/code.php?code=".$code;
-		ini_set('user_agent','ownCloud Downloader;');
+		$url = $nextcloud_url."/index.php/apps/shorten/code.php?code=".$code;
+		ini_set('user_agent','Nextcloud Downloader;');
 		$headers = get_headers($url);
 		foreach ($headers as $h) {
 			if (startsWith($h, "Location:")) {
@@ -50,5 +45,4 @@ if ($enabled) {
 		echo "Invalid link.";
 	}
 }
-
 ?>
