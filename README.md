@@ -15,8 +15,9 @@ Shorten is an add-on app for Nextcloud that enables one-click URL shortening. It
 
 ### Step 2: Setup the shortening server
 
-#### *Step 2 - Option A: goo.gl*
+#### *Step 2 - Option A: goo.gl - Not available anymore*
 To use http://goo.gl, all you need to do is acquire  an API key to use in the admin settings. You can acquire  a key using these instructions from Google: *https://developers.google.com/url-shortener/v1/getting_started#APIKey*
+NOTE: Google is discontinuing the goo.gl service. Read more here: *https://developers.googleblog.com/2018/03/transitioning-google-url-shortener.html*
   
 #### *Step 2 - Option B: Internal shortener and privacy filter*
 
