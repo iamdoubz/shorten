@@ -40,9 +40,9 @@ function addGlobalListener(o) {
 }
 
 function replaceUrl() {
-	if ($('#linkText').css('display') == 'block') {
-		var curUrl = $('#linkText').val();
-		$('#linkText').val('Please wait...');
+	if ($('.linkText').css('display') == 'block') {
+		var curUrl = $('.linkText').val();
+		$('.linkText').val('Please wait...');
 		makeUrl(curUrl);
 	}
 }
@@ -50,7 +50,7 @@ function replaceUrl() {
 function makeUrl(curUrl, partUrl) {
 	var shortenurl = OC.linkTo("shorten","makeurl").replace("apps/shorten","index.php/apps/shorten");
 	$.post(shortenurl, { curUrl: curUrl }, function (data) {
-		$('#linkText').val(data);
+		$('.linkText').val(data);
 	});
 }
 
@@ -82,17 +82,17 @@ function replaceShare() {
 		this.originitialize(options);
 		var view = this;
 		this.model.on('change:permissions', function() {
-			if (determineLinkBox(view.$el.find('#linkText'))) {
-				replaceUrl2(view.$el.find('#linkText'));
-			} else if (determineLinkBox(view.$el.find('#linkText-view15'))) {
-				replaceUrl2(view.$el.find('#linkText-view15'));
+			if (determineLinkBox(view.$el.find('.linkText'))) {
+				replaceUrl2(view.$el.find('.linkText'));
+			} else if (determineLinkBox(view.$el.find('.linkText-view15'))) {
+				replaceUrl2(view.$el.find('.linkText-view15'));
 			}
 		});
 		this.model.on('change:linkShare', function() {
-			if (determineLinkBox(view.$el.find('#linkText'))) {
-				replaceUrl2(view.$el.find('#linkText'));
-			} else if (determineLinkBox(view.$el.find('#linkText-view15'))) {
-				replaceUrl2(view.$el.find('#linkText-view15'));
+			if (determineLinkBox(view.$el.find('.linkText'))) {
+				replaceUrl2(view.$el.find('.linkText'));
+			} else if (determineLinkBox(view.$el.find('.linkText-view15'))) {
+				replaceUrl2(view.$el.find('.linkText-view15'));
 			}
 		});
 	}
