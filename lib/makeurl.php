@@ -1,7 +1,6 @@
 <?php
 \OCP\User::checkLoggedIn();
 \OCP\App::checkAppEnabled('shorten');
-
 function startsWith($haystack, $needle) {
     return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
 }
@@ -40,12 +39,10 @@ function getShortcode($url) {
 	}
 	return $shortcode;
 }
-
 function generateUrl() {
 	$host = OC::$server->getConfig()::getAppValue('shorten', 'host', '');
         $type = OC::$server->getConfig()::getAppValue('shorten', 'type', '');
         $api = OC::$server->getConfig()::getAppValue('shorten', 'api', '');
-
 	$curUrl = $_POST['curUrl'];
 	$ret = "";
 	if (isset($type) && ($type == "" || $type == "internal")) {
