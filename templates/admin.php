@@ -1,17 +1,14 @@
 <?php
-
 $host = $_['host'];
 $type = $_['type'];
 $api = $_['api'];
-
 ?>
-
 <div class="section">
         <h2>Shorten</h2>
 	<label for="shorten-host-type">Which type of URL shortener to use:</label><br>
 	<select id="shorten-type">
 		<option <?php if (!$type || $type == "internal" || $type == "") echo "selected"; ?> value="internal">Internal shortener and privacy filter</option>
-		<option <?php if ($type == "googl") echo "selected"; ?> value="googl">goo.gl</option>
+		<!--<option <?php if ($type == "googl") echo "selected"; ?> value="googl">goo.gl</option>-->
 		<option <?php if ($type == "yourls") echo "selected"; ?> value="yourls">YOURLS</option>
 	</select><br>
 	<br>
