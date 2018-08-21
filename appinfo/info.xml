@@ -4,6 +4,7 @@
 	<name>Shorten</name>
 	<description>Easy one-click URL shortener and privatizer</description>
 	<licence>GPL</licence>
+	<require>13.0.4</require>
 	<author>iamdoubz</author>
 	<types>
 		<filesystem/>
