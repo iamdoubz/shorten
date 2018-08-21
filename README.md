@@ -1,8 +1,8 @@
 # Shorten
 Shorten is an add-on app for Nextcloud that enables one-click URL shortening. Its features include:
 - Automatic replacement of the public share URL with the shortened URL
-- No need to create a seperate "Shorten" URL
-- Internal shortner or goo.gl support
+- No need to create a separate "Shorten" URL
+- Internal shortener or goo.gl support
 - Ability to completely hide the Nextcloud server with the internal shortener by proxying shortened requests through another server
     - Note: While normal shares will never expose the Nextcloud URL, password protected files will as the password display screen must be supplied to the user.
 
