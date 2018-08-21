@@ -1,6 +1,5 @@
 <?php
 \OCP\App::checkAppEnabled('shorten');
-
 function validateCode($string) {
 	if(preg_match("/^[\w]+$/", $string)) {
 		return true;
@@ -19,6 +18,7 @@ if (validateCode($code)) {
 		}
 	}
 	if ($url != "") {
+		//header("Location: ".$url."&download");
 		$url = $url."/download";
 		ini_set('user_agent','Nextcloud Downloader;'); 
 		$headers = get_headers($url);
