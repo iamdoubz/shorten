@@ -1,12 +1,12 @@
 <?php
 /**
- * ownCloud - shorten
+ * Nextcloud - shorten
  *
  * This file is licensed under the Affero General Public License version 3 or
  * later. See the COPYING file.
  *
- * @author Ben Curtis <ownclouddev@nosolutions.com>
- * @copyright Ben Curtis 2015
+ * @author iamdoubz
+ * @copyright iamdoubz 2018
  */
 
 namespace OCA\Shorten\AppInfo;
