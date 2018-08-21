@@ -20,23 +20,29 @@ use \OCP\IRequest;
 #\OCP\User::checkLoggedIn();
 \OCP\App::checkAppEnabled('shorten');
 
+
 class ShortenApiController extends ApiController {
+
     private $userId;
+
     public function __construct($appName, IRequest $request){
         parent::__construct($appName, $request);
     }
-    /* @NoAdminRequired */
+
+    #@NoAdminRequired
     public function makeurl() {
-	require_once 'shorten/lib/makeurl.php';
-	return generateUrl();
+        require_once 'shorten/lib/makeurl.php';
+        return generateUrl();
     }
-    /* @NoAdminRequired */
+
+    #@NoAdminRequired
     public function code() {
-	require_once 'shorten/lib/code.php';
-	return runCode();
+        require_once 'shorten/lib/code.php';
+        return runCode();
     }
+
     public function setval() {
-	require_once 'shorten/lib/setval.php';
-	return setAdminVal();
+        require_once 'shorten/lib/setval.php';
+        return setAdminVal();
     }
 }
