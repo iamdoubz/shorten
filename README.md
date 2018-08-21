@@ -1,3 +1,6 @@
+# Notice
+Currently, this application for Nextcloud does not work. However, it does work if you are using YOURLS and you HARDCODE the host and api in the admin.php file.
+
 # Shorten
 Shorten is an add-on app for Nextcloud that enables one-click URL shortening. Its features include:
 - Automatic replacement of the public share URL with the shortened URL
