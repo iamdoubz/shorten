@@ -1,5 +1,5 @@
 # Shorten
-Shorten is an add-on app for Nextcloud that enables one-click URL shortening. It's features include:
+Shorten is an add-on app for Nextcloud that enables one-click URL shortening. Its features include:
 - Automatic replacement of the public share URL with the shortened URL
 - No need to create a seperate "Shorten" URL
 - Internal shortner or goo.gl support
@@ -16,7 +16,7 @@ Shorten is an add-on app for Nextcloud that enables one-click URL shortening. It
 ### Step 2: Setup the shortening server
 
 #### *Step 2 - Option A: goo.gl*
-To use http://goo.gl, all you need to do is aquire an API key to use in the admin settings. You can aquire a key using these instructions from Google: *https://developers.google.com/url-shortener/v1/getting_started#APIKey*
+To use http://goo.gl, all you need to do is acquire  an API key to use in the admin settings. You can acquire  a key using these instructions from Google: *https://developers.google.com/url-shortener/v1/getting_started#APIKey*
   
 #### *Step 2 - Option B: Internal shortener and privacy filter*
 
@@ -59,4 +59,3 @@ https://mydomain.ext/s
 If you're using http://goo.gl, you would need to include your API key in the provided settings box.
 
 At this point, when you check the box to share a file publically, the app will replace the public share link displayed in the Nextcloud web interface.
-
