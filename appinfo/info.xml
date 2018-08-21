@@ -4,14 +4,13 @@
 	<name>Shorten</name>
 	<description>Easy one-click URL shortener and privatizer</description>
 	<licence>GPL</licence>
-	<require>7.0.4</require>
-	<author>Ben Curtis</author>
+	<author>iamdoubz</author>
 	<types>
 		<filesystem/>
 	</types>
-	<version>0.0.15</version>
+	<version>0.1.0</version>
         <dependencies>
-            <owncloud min-version="7.0.3" max-version="9.1" />
+            <nextcloud min-version="13" max-version="13"/>
         </dependencies>
 	<default_enable/>
 </info>
