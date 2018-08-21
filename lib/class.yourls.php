@@ -11,20 +11,16 @@ class yourls {
 			$this->setRoot($root);
 		}
 	}
-	
 	public function setKey($key) {
 		$this->key = $key;
 	}
-
 	public function setRoot($root) {
 		$this->root = $root;
 	}
-	
 	public function s($url) {
 		$data = $this->shorten($url);
 		return isset($data->shorturl) ? $data->shorturl : $url;
 	}
-	
 	public function shorten($url) {
 		$data = array(
 			'url' => $url,
@@ -35,7 +31,6 @@ class yourls {
 		
 		return $this->fetch($this->root,$data);
 	}
-	
 	private function fetch($root, $data = array()) {
 		$url = $root."/yourls-api.php";
 		$ch = curl_init();
