@@ -1,12 +1,10 @@
 <?php
-
 \OCP\User::checkLoggedIn();
 \OCP\App::checkAppEnabled('shorten');
 
 function startsWith($haystack, $needle) {
     return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== FALSE;
 }
-
 function rand_chars($length) {
 	$urlString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	$arr = str_split($urlString);
@@ -15,7 +13,6 @@ function rand_chars($length) {
 	$str = implode('', $arr);
 	return $str;
 } 
-
 function getShortcode($url) {
 	$shortcode = '';
 	$query = OCP\DB::prepare('SELECT shortcode FROM *PREFIX*shorten WHERE url=?');
@@ -45,10 +42,10 @@ function getShortcode($url) {
 }
 
 function generateUrl() {
-	//$newHost = "https://nowsci.com/s/";
-	$host = OCP\Config::getAppValue('shorten', 'host', '');
-	$type = OCP\Config::getAppValue('shorten', 'type', '');
-	$api = OCP\Config::getAppValue('shorten', 'api', '');
+	$host = OC::$server->getConfig()::getAppValue('shorten', 'host', '');
+        $type = OC::$server->getConfig()::getAppValue('shorten', 'type', '');
+        $api = OC::$server->getConfig()::getAppValue('shorten', 'api', '');
+
 	$curUrl = $_POST['curUrl'];
 	$ret = "";
 	if (isset($type) && ($type == "" || $type == "internal")) {
@@ -82,5 +79,4 @@ function generateUrl() {
 	}
 	return $ret;
 }
-
 ?>
